@@ -1,0 +1,19 @@
+<p> hello <%= @user.name %></p>
+<p>address: <%= @user.address %></p>
+<p>city: <%= @user.city %></p>
+<p>state: <%= @user.state %></p>
+<p>country: <%= @user.country %></p>
+<p>email: <%= @user.email %></p>
+<p>username: <%= @user.username %></p>
+
+<p>Phone(s):<br>
+  <% if !@user.phones.any? %>
+  <%= "No phone" %>
+  <% else %>
+    <% @user.phones.each do |phone| %>
+      <%= phone.phone_number %><br>
+    <% end %>
+  <% end %>
+
+
+</p>
